@@ -15,6 +15,29 @@
     width: 100%;
     background-color: rgb(180, 201, 248);
 }
+.hoverbtn {
+    position: relative;
+    color: wheat;
+    padding: 10px 20px;
+    display: inline-block;
+    overflow: hidden;
+}
+
+.hoverbtn::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 0;
+    z-index: -1;
+    background: black;
+    transition: width 300ms ease;
+}
+
+.hoverbtn:hover::before {
+    width: 100%;
+}
 
 nav {
     width: 100%;
@@ -122,14 +145,14 @@ section {
     overflow: hidden;
     z-index: 0;
     margin-top: 1rem;
-    color: rgb(79, 47, 67);
+    /* color: rgb(79, 47, 67); */
 }
 /* 
 .home .text .btn:hover {
     background-color: darkcyan;
 } */
 
-.home .text .btn::before {
+/* .home .text .btn::before {
     content: '';
     position: absolute;
     top: 0;
@@ -144,7 +167,7 @@ section {
 }
 .home .text .btn:hover::before{
     background-color: #fff;
-}
+} */
 .home .image {
     margin: 0%;
     height: 100px;
